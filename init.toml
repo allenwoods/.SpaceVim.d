@@ -11,11 +11,12 @@
     # set spacevim theme. by default colorscheme layer is not loaded,
     # if you want to use more colorscheme, please load the colorscheme
     # layer
-    colorscheme = "gruvbox"
+    colorscheme = "material"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
-    enable_guicolors = false
+    enable_guicolors = true
+
     # Disable statusline separator, if you want to use other value, please
     # install nerd fonts
     statusline_separator = "nil"
@@ -25,14 +26,18 @@
     enable_tabline_filetype_icon = false
     enable_statusline_mode = false
     statusline_unicode_symbols = false
+
     # Enable vim compatible mode, avoid changing origin vim key bindings
     vimcompatible = true
+    
+    # Auto update SpaceVim
+    automatic_update = true
 
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
-auto_completion_return_key_behavior = "complete"
-auto_completion_tab_key_behavior = "cycle"
+auto_completion_return_key_behavior = "smart"
+auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
 name = 'shell'
@@ -40,4 +45,17 @@ default_position = 'top'
 default_height = 30
 
 [[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "lsp"
+  enabled_clients = ['vimls']
+  filetypes = [
+    "python",
+    "vim",
+    "sh"
+  ]
+
+[[layers]]
   name = "lang#python"
+
