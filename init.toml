@@ -33,29 +33,24 @@
     # Auto update SpaceVim
     automatic_update = true
 
+    # Add custom function
+    bootstrap_before = 'myspacevim#before'
+    bootstrap_after = 'myspacevim#after'
+
 # Enable autocomplete layer
 [[layers]]
-name = 'autocomplete'
-auto_completion_return_key_behavior = "smart"
-auto_completion_tab_key_behavior = "smart"
+    name = 'autocomplete'
+    auto_completion_return_key_behavior = "smart"
+    auto_completion_tab_key_behavior = "smart"
 
 [[layers]]
-name = 'shell'
-default_position = 'top'
-default_height = 30
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
 
 [[layers]]
-  name = "colorscheme"
+    name = "colorscheme"
 
 [[layers]]
-  name = "lsp"
-  enabled_clients = ['vimls']
-  filetypes = [
-    "python",
-    "vim",
-    "sh"
-  ]
-
-[[layers]]
-  name = "lang#python"
+    name = "lang#python"
 
